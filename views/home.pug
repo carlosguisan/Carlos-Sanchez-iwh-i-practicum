@@ -6,9 +6,15 @@ html
     link(rel="stylesheet", href="/css/style.css")
   body
     h1 Events
-    .cards
+    table
+      thead
+        tr
+          th.name Event Name
+          th.date Event Date
+          th.description Description
+      tbody
         each event in data
-          .card
-              h2.card__name #{event.properties.name}
-              p.card__date #{event.properties.event_date}
-              p.card__description #{event.properties.short_description}
+          tr
+            td= event.properties.name
+            td= event.properties.event_date
+            td= event.properties.short_description
