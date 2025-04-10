@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Update event
+    a(href="/") Return to the homepage
+    form(method="POST" action="/update-cobj")
+      input(type="text", name="name", placeholder="Event name")
+      input(type="text", name="event_date", placeholder="Event name")
+      input(type="text", name="short_description", placeholder="Event short description")
+      input(type="submit", value="Submit")
