@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Events
+    .cards
+        each event in data
+          .card
+              h2.card__name #{event.properties.name}
+              p.card__date #{event.properties.event_date}
+              p.card__description #{event.properties.short_description}
